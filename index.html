@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CRUD | Eslam Fayez</title>
+        <!-- Render All Elements Normally -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <!-- Font Awesom Library -->
+        <link rel="stylesheet" href="Css/all.min.css" />
+        <!-- Main porject Css File -->
+        <link rel="stylesheet" href="Css/style.css" />
+        <!-- Googl Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400;1,700&display=swap"rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="crud">
+            <div class="container">
+                <!-- Start Head -->
+                <div class="head">
+                    <h2>Crud</h2>
+                    <p>Product Management System</p>
+                </div>
+                <!-- End Head -->
+                <!-- Start Inputs -->
+                <div class="inputs">
+                    <input type="text" placeholder="title" id="title">
+                    <div class="content">
+                        <div class="price">
+                            <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                            <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                            <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                            <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                        </div>
+                        <small id="total"></small>
+                    </div>
+                    <div class="info">
+                        <div class="inpt">
+                            <input type="number" placeholder="count" id="count">
+                            <input type="text" placeholder="category" id="category">
+                        </div>
+                        <button id="submit">Create</button>
+                    </div>
+                </div>
+                <!-- End Inputs -->
+                <!-- Start outputs -->
+                <div class="outputs">
+                    <div class="searchblock">
+                        <input onkeyup="searchData(this.value)" type="text" placeholder="search" id="search">
+                        <div class="btnsearch">
+                            <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                            <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Categore</button>
+                        </div>
+                    </div>
+                    <div id="deleteAll">
+                        
+                    </div>
+                    <div class="responsiv-table">
+                        <table>
+                            <tr>
+                                <th>id</th>
+                                <th>title</th>
+                                <th>price</th>
+                                <th>taxes</th>
+                                <th>ads</th>
+                                <th>discount</th>
+                                <th>total</th>
+                                <th>category</th>
+                                <th>update</th>
+                                <th>delete</th>
+                            </tr>
+    
+                            <tbody id="tbody">
+
+                            </tbody>
+    
+                        </table>
+                    </div>
+                </div>
+                <!-- End outputs -->
+            </div>
+        </div>
+        <script src="cruds.js"></script>
+    </body>
+</html>
